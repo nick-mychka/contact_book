@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Contact Book</title>
+        
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- font-awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>      
+        <div class="container">
+            <div class="wrapper">
+                <div class="row no-gutters left_row">
+                  <div class="col-sm-4">
+                  <section class="left_section">
+                        <div class="ls_search">
+                            <input id="searchContact" class="form-control" type="search" name="search" placeholder="Search your contacts...">
+                        </div>
+                        <div class="ls_head_buttons">
+                            <div class="dropdown ls_group_list">
+                              <button class="btn btn-secondary dropdown-toggle group_name" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All contacts</button>
+                              <ul class="dropdown-menu group_list" aria-labelledby="dropdownMenuButton">
+                                <li class="dropdown-item" href="#">All contacts</li>
+                                <li class="dropdown-item" href="#">Family</li>
+                                <li class="dropdown-item" href="#">Friend</li>
+                                <li class="dropdown-item" href="#">University</li>
+                                <li class="dropdown-item" href="#">Black list</li>
+                              </ul>
+                            </div>
+                            <div class="ls_add_group">
+                                <button type="button" class="btn btn-secondary add_newgroup">Add group</button>
+                                <form class="ls_form_add_group">
+                                    <button type="button" class="close close_btn">
+                                        <span>×</span>
+                                    </button>
+                                    <h4>Please, enter the name of your group!</h4>
+                                    <input type="text" name="new_group" placeholder="New group" class="push_group">
+                                    <button type="button" class="btn btn-success confirm_add_newgroup">Done!</button>
+                                </form>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="ls_contact_list">
+                            <ul id="myUL" class="ls_list">
+                                <li data-name="Ivanov Ivan Ivonovich" 
+                                    data-email="ivanovich@gmail.com" 
+                                    data-phone="+380 631238544" 
+                                    data-group="Family">
+                                    Ivanov Ivan Ivonovich
+                                    <i class="fa fa-exchange transfer" aria-hidden="true"></i>
+                                </li>
+                                <li data-name="Mychka Nick Js" 
+                                    data-email="nickmychka@gmail.com" 
+                                    data-phone="+380 737587463" 
+                                    data-group="Friend">
+                                    Mychka Nick Js
+                                    <i class="fa fa-exchange transfer" aria-hidden="true"></i>
+                                </li>
+                                <li data-name="Boby Gansta Jj" 
+                                    data-email="boby@gmail.com" 
+                                    data-phone="+380 737237493" 
+                                    data-group="University">
+                                    Boby Gansta Jj
+                                    <i class="fa fa-exchange transfer" aria-hidden="true"></i>
+                                </li>
+                                <li data-name="Semenik Lora Ivonova" 
+                                    data-email="semenik@gmail.com" 
+                                    data-phone="+380 631239945" 
+                                    data-group="Family">
+                                    Semenik Lora Ivonova
+                                    <i class="fa fa-exchange transfer" aria-hidden="true"></i>
+                                </li>
+                                <li data-name="Myshlen Sem Cock" 
+                                    data-email="myshlen@gmail.com" 
+                                    data-phone="+380 737588896" 
+                                    data-group="Friend">
+                                    Myshlen Sem Cock
+                                    <i class="fa fa-exchange transfer" aria-hidden="true"></i>
+                                </li>
+                                <li data-name="Borya Sandwich Clodd" 
+                                    data-email="sandwich@gmail.com" 
+                                    data-phone="+380 739512793" 
+                                    data-group="University">
+                                    Borya Sandwich Clodd
+                                    <i class="fa fa-exchange transfer" aria-hidden="true"></i>
+                                </li>
+                            </ul>
+<!-- form_add -->
+                           <!--  <div class="background_cover">  -->   
+                                <form class="ls_form_add">
+                                    <button type="button" class="close close_btn"><span>×</span></button>
+                                    <div class="form-group">
+                                        <label for="full_name"> <i class="fa fa-pencil" aria-hidden="true"></i> Full Name</label>
+                                        <input type="text" class="form-control add_name" id="full_name" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email"> <i class="fa fa-envelope-o" aria-hidden="true"></i> Email</label>
+                                        <input type="email" class="form-control add_email" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone"> <i class="fa fa-phone" aria-hidden="true"></i> Phone</label>
+                                        <input type="phone" class="form-control add_phone" id="phone" placeholder="Phone" value="+380 ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="group"> <i class="fa fa-users" aria-hidden="true"></i> Group</label>
+                                        <select type="group" class="form-control custom-select add_group" id="group" placeholder="Group">
+                                            <option>Family</option>
+                                            <option>Friend</option>
+                                            <option>University</option>
+                                            <option>Black list</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary form_create_btn">Create</button>
+                                    <div class="pointer"></div>
+                                </form>
+    <!-- form_edit -->
+                               <form class="ls_form_edit">
+                                    <button type="button" class="close close_btn"><span>×</span></button>
+                                    <div class="form-group">
+                                        <label for="full-name"> <i class="fa fa-pencil" aria-hidden="true"></i> Full Name</label>
+                                        <input type="text" class="form-control edit_name" id="full-name" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email"> <i class="fa fa-envelope-o" aria-hidden="true"></i> Email</label>
+                                        <input type="email" class="form-control edit_email" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone"> <i class="fa fa-phone" aria-hidden="true"></i> Phone</label>
+                                        <input type="phone" class="form-control edit_phone" id="phone" placeholder="Phone" value="+380 ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="group"> <i class="fa fa-users" aria-hidden="true"></i> Group</label>
+                                        <select type="group" class="form-control custom-select edit_group" id="group" placeholder="Group">
+                                            <option>Family</option>
+                                            <option>Friend</option>
+                                            <option>University</option>
+                                            <option>Black list</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary form_confirm_btn">Confirm</button>
+                                    <div class="pointer"></div>
+                                </form>
+    <!-- form_delete -->
+                                <form class="ls_form_delete">
+                                    <button type="button" class="close close_btn">
+                                        <span>×</span>
+                                    </button>
+                                    <h4>Are you sure that you are wanted to delete <span class="warn_q"></span>?</h4>
+                                    <div class="danger_zone">
+                                        <button type="button" class="btn btn-danger cancel_delete">Cancel</button>
+                                        <button type="button" class="btn btn-success confirm_delete">Confirm</button>
+                                    </div>                                
+                                </form>
+                            <!-- </div> -->
+                        </div>
+                        <div class="ls_foot_buttons">
+                            <button type="button" class="btn btn-success btn_add">Add</button>
+                            <button type="button" class="btn btn-danger btn_remove hidden_content">Remove</button>
+                            <button type="button" class="btn btn-primary btn_edit hidden_content">Edit</button>
+                        </div>
+                      </div>
+                  </section>
+                  <div class="col-sm-8">
+                    <section class="right_section">
+                        <div class="rs_informer">
+                            <h1>Contacts Book</h1>
+                            <div class="rs_interface">
+                                <div class="rs_photo"></div>
+                                <div class="rs_anonym">
+                                    <h3><i class="fa fa-pencil" aria-hidden="true"></i> <span class="ct_name"></span></h3>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="rs_contact_info">
+                                <p><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> Email: <span class="ct_email"></span></p>
+                                <p><span><i class="fa fa-phone" aria-hidden="true"></i></span> Phone: <span class="ct_phone"></span></p>
+                                <p><span><i class="fa fa-users" aria-hidden="true"></i></span> Group: <span class="ct_group"></span></p>
+                            </div>
+                        </div>
+                    </section>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+                <!-- js -->
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
